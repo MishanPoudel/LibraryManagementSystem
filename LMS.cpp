@@ -41,7 +41,8 @@ int newStudent()
             cout << "Contact Number: ";
             cin >> number;
 
-            login << endl << "Student Name: " << name << endl;
+            login << endl
+                  << "Student Name: " << name << endl;
             login << "Gmail: " << gmail << endl;
             login << "Contact Number: " << number << endl;
         }
@@ -52,7 +53,6 @@ int newStudent()
         cout << "Error opening the file for writing." << endl;
     }
 }
-
 
 int main()
 {
