@@ -59,36 +59,35 @@ void newBook()
     ofstream books("books.txt", ios::app);
     if (books.is_open())
     {
-        int id, price, year;
+        int id, price, year, count;
         string name, publisher;
         cout << "How many books to add?:";
         cin >> count;
         for (int i = 1; i <= count; i++)
         {
-            cout << "Book ID: ";
-            cin >> id;
+        cout << "Book ID: ";
+        cin >> id;
+        
+        cout << "Book Name: ";
+        cin.ignore();  
+        getline(cin, name);
 
-            cout << "Book Name: ";
-            cin.ignore();
-            getline(cin, name);
+        cout << "Publisher: ";
+        getline(cin, publisher);
 
-            cout << "Publisher: ";
-            getline(cin, publisher);
+        cout << "Price: ";
+        cin >> price;
 
-            cout << "Price: ";
-            cin >> price;
+        cout << "Publication Year: ";
+        cin >> year;
 
-            cout << "Publication Year: ";
-            cin >> year;
+        books << endl << "Book ID: "<< id << endl ;
+        books << "Name: "<< name << endl;
+        books << "Publisher: "<< publisher <<endl ;
+        books << "Price: "<< price << endl;
+        books << "Year: "<< year << endl;
 
-            books << endl
-                  << "Book ID: " << id << endl;
-            books << "Name: " << name << endl;
-            books << "Publisher: " << publisher << endl;
-            books << "Price: " << price << endl;
-            books << "Year: " << year << endl;
-
-            cout << "Book information added successfully!" << endl;
+        cout << "Book information added successfully!" << endl;
         }
     }
     else
