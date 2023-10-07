@@ -65,29 +65,25 @@ void newBook()
         cin >> count;
         for (int i = 1; i <= count; i++)
         {
-        cout << "Book ID: ";
-        cin >> id;
-        
-        cout << "Book Name: ";
-        cin.ignore();  
-        getline(cin, name);
+            cout << "Book ID: ";
+            cin >> id;
+            cout << "Book Name: ";
+            cin.ignore();
+            getline(cin, name);
+            cout << "Publisher: ";
+            getline(cin, publisher);
+            cout << "Price: ";
+            cin >> price;
+            cout << "Publication Year: ";
+            cin >> year;
+            books << endl
+                  << "Book ID: " << id << endl;
+            books << "Name: " << name << endl;
+            books << "Publisher: " << publisher << endl;
+            books << "Price: " << price << endl;
+            books << "Year: " << year << endl;
 
-        cout << "Publisher: ";
-        getline(cin, publisher);
-
-        cout << "Price: ";
-        cin >> price;
-
-        cout << "Publication Year: ";
-        cin >> year;
-
-        books << endl << "Book ID: "<< id << endl ;
-        books << "Name: "<< name << endl;
-        books << "Publisher: "<< publisher <<endl ;
-        books << "Price: "<< price << endl;
-        books << "Year: "<< year << endl;
-
-        cout << "Book information added successfully!" << endl;
+            cout << "Book information added successfully!" << endl;
         }
     }
     else
@@ -96,6 +92,36 @@ void newBook()
     }
 
     books.close();
+}
+
+void issueBook()
+{
+    int bookID, issueD, dueD;
+    string name;
+    ofstream issue("issuedBooks.txt", ios::app);
+    if (issue.is_open())
+    {
+        cout << "Book ID: ";
+        cin >> bookID;
+        cout << "Student Name: ";
+        cin.ignore();
+        getline(cin, name);
+        cout << "issue Date: ";
+        cin >> issueD;
+        cout << "Due Date: ";
+        cin >> dueD;
+    }
+    else
+    {
+        cout << "Error opening the file for writing." << endl;
+    }
+    issue << endl
+          << "Book ID: " << bookID << endl;
+    issue << "Student Name: " << studentID << endl;
+    issue << "issue Date: " << issueD << endl;
+    issue << "Due Date: " << dueD << endl;
+
+    issue.close();
 }
 
 int main()
@@ -107,5 +133,6 @@ int main()
          << "2. \n"
          << "2. New Book\n";
     // newStudent();
-    newBook();
+    // newBook();
+    issueBook();
 }
