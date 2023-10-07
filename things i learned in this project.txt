@@ -1,0 +1,34 @@
+THESE ARE THE THINGS I GOT TO KNOW/ LEARN IN THIS PROJECT
+
+1. File handling
+   i) Include the necessary header file: 
+      To perform file handling operations in C++, you need to include the <fstream> header.
+
+   ii) Declare a file stream object:
+      ifstream inFile;    // For reading from a file
+      ofstream outFile;   // For writing to a file
+      fstream file;       // For both reading and writing to a file
+
+   iii) Open the file:
+      inFile.open("input.txt");    // Open an existing file for reading
+      outFile.open("output.txt");  // Create a new file for writing
+      file.open("data.txt", ios::in | ios::out); // Open a file for both reading and writing
+
+   iv) Perform file operations:
+      *Reading from a file:
+         int data;
+         inFile >> data; // Read data from the file
+
+      *Writing to a file:
+         int data = 42;
+         outFile << data; // Write data to the file
+
+      *Closing the file:
+         inFile.close();   // Close the input file
+         outFile.close();  // Close the output file
+
+
+2. size_t:
+   `size_t` is an unsigned integer type used to represent sizes and indices, 
+   with its size varying depending on the platform.
+
