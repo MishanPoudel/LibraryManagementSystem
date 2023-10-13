@@ -74,7 +74,7 @@ int newStudent()
 void newBook()
 {
     ofstream books("books.txt", ios::app);
-    if (books.is open())
+    if (books.is_open())
     {
         int id, price, year;
         string name, publisher;
