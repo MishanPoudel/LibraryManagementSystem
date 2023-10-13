@@ -32,3 +32,12 @@ THESE ARE THE THINGS I GOT TO KNOW/ LEARN IN THIS PROJECT
    `size_t` is an unsigned integer type used to represent sizes and indices, 
    with its size varying depending on the platform.
 
+3. find:
+   find function is used to search for a substring or character within a string
+   find and rfind(reverse find)
+
+4. to_string():
+   this function converts any integer to string
+
+5. string::npos:
+   It essentially means "not found."

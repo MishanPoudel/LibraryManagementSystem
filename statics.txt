@@ -1,0 +1,28 @@
+
+Issue Details
+Book ID: 1
+Student Name: Misery
+Issue Date: 13
+Due Date: 15
+Current Date and Time: 2023-10-13 21:59:23
+
+Issue Details
+Book ID: 2
+Student Name: Sirish
+Issue Date: 13
+Due Date: 15
+Current Date and Time: 2023-10-13 21:59:23
+
+Returned Book
+Book ID: 1
+Student Name: Misery
+Issue Date: 13
+Due Date: 15
+Current Date and Time: 2023-10-13 21:59:23
+
+Returned Book
+Book ID: 2
+Student Name: Sirish
+Issue Date: 13
+Due Date: 15
+Current Date and Time: 2023-10-13 21:59:23
